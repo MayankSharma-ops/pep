@@ -3,7 +3,7 @@ using namespace std;
 int main(){
 
     int n=5;
-    int arr[]={2,7,11,15,3};
+    int arr[]={2,17,7,15,3};
     int target=9;
     int i,j;
     for(i=0;i<n;i++){
