@@ -1,22 +1,26 @@
 #include <iostream>
 using namespace std;
 int main(){
-    int n=5;
-    int arr[]={2,17,7,15,3};
+    int n=6;
+    int arr[]={1,0,1,2,0,1};
 
-
-    int i,j,temp=0;
-    for(i=0;i<n;i++){
-        for(j=i+1;j<n;j++){
-            if(arr[i]>arr[j]){
-                temp=arr[i];
-                arr[i]=arr[j];
-                arr[j]=temp;
+    int low=0, mid=0, high=n-1;
+    while(mid<=high){
+        if(arr[mid]==0){
+            swap(arr[low],arr[mid]);
+            low++;
+            mid++;
+        }
+        else if(arr[mid]==1){
+            mid++;
+        }
+        else{
+            swap(arr[mid],arr[high]);
+            high--;
         }
     }
-}
 
-    for(i=0;i<n;i++){
+    for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";
     }
 
