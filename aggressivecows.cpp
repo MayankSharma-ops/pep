@@ -17,7 +17,6 @@ public:
         }
         return false;
     }
-
     int aggressiveCows(vector<int> &stalls, int k) {
         sort(stalls.begin(), stalls.end());
 
