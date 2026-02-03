@@ -25,5 +25,11 @@ int main(){
     cout << *q << endl;
 
 
+    char ch = 'a';
+    char* pt = &ch;
+    ch++;
+    cout << *pt << endl;
+
+
     return 0;
 }
