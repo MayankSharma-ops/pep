@@ -10,7 +10,7 @@ public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
         ListNode* dummy = new ListNode(0);
         dummy->next = head;
-
+        //make copies of dummy
         ListNode* temp = dummy;
         ListNode* prev = dummy;
 
@@ -19,13 +19,13 @@ public:
             temp = temp->next;
         }
 
-        // move both pointers
+        // move both pointers until temp reaches the end
         while(temp->next != NULL) {
             temp = temp->next;
             prev = prev->next;
         }
 
-        // remove node
+        // set prev's next to skip the nth node from end
         prev->next = prev->next->next;
 
         return dummy->next;
